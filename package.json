@@ -14,7 +14,6 @@
     "grapesjs-custom-code": "^1.0.1",
     "grapesjs-plugin-ckeditor": "^0.0.10",
     "grapesjs-plugin-forms": "^2.0.5",
-    "grapesjs-plugin-header": "^0.1.54",
     "grapesjs-preset-webpage": "^1.0.2",
     "grapesjs-shape-divider": "^0.3.14",
     "vue": "^3.2.13",
