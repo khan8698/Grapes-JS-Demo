@@ -20,10 +20,9 @@ import customCodePlugin from 'grapesjs-custom-code';
 import ckEditorPlugin from 'grapesjs-plugin-ckeditor';
 import 'ckeditor'
 import CKEDITOR from 'ckeditor'
-import "grapesjs-shape-divider";
-
-// import gjsHead from "../Plugins/grapesjs-plugin-header/index";
-// import gjsHead from "grapesjs-plugin-header";
+import gjsDivider from "grapesjs-shape-divider";
+import gjsSocial from "../Plugins/grapesjs-plugin-social2";
+import gjsHead from "../Plugins/grapesjs-plugin-header";
 
 onMounted(() => {
   grapesjs.init({
@@ -43,7 +42,7 @@ onMounted(() => {
       }),
       editor => presetWebpage(editor, {
         category: 'Elements',
-        blocks: ['text', 'image', 'video', 'button'],
+        blocks: ['text', 'image', 'video'],
         flexGrid: true,
         labelImage: 'Image',
         labelVideo: 'Video'
@@ -81,12 +80,17 @@ onMounted(() => {
           },
         }
       }),
-      'grapesjs-shape-divider'
-      // editor => gjsDivider(editor , {
-      //   category: 'Elements',
-      // })
-      // gjsHead
-      // editor => gjsHead(editor, { category: 'Elements' })
+      editor => gjsDivider(editor, {
+        category: 'Elements',
+        labelSectionCategory: 'Elements',
+      }),
+      // 'grapesjs-plugin-header',
+      editor => gjsHead(editor, {
+        category: 'Elements',
+      }),
+      editor => gjsSocial(editor, {
+        category: 'Elements',
+      }),
     ],
     storageManager: {
       id: 'gjs-',
@@ -120,10 +124,6 @@ onMounted(() => {
         ]
     },
     pluginsOpts: {
-      'grapesjs-shape-divider': {
-        category: 'Elements',
-
-      }
     }
   })
 })
