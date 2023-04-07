@@ -1,6 +1,5 @@
-# swiss-cms
 
-## Project setup
+# Project setup
 ```
 npm install
 ```
